@@ -1,0 +1,32 @@
+{
+  "name": "wiki-com-search",
+  "version": "0.1.0",
+  "description": "React component and client for searching Japanese Wikipedia/Wikidata company information.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm --dts --external react --external react-dom && cp src/style.css dist/style.css",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0"
+  },
+  "keywords": ["react", "wikipedia", "wikidata", "company-search"],
+  "license": "MIT"
+}
