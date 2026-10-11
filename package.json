@@ -13,7 +13,9 @@
     },
     "./style.css": "./dist/style.css"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup src/index.tsx --format esm --dts --external react --external react-dom && cp src/style.css dist/style.css",
     "typecheck": "tsc --noEmit"
@@ -27,6 +29,25 @@
     "tsup": "^8.0.0",
     "typescript": "^5.5.0"
   },
-  "keywords": ["react", "wikipedia", "wikidata", "company-search"],
-  "license": "MIT"
+  "keywords": [
+    "react",
+    "wikipedia",
+    "wikidata",
+    "company-search"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haruya510/wiki-com-search.git"
+  },
+  "homepage": "https://github.com/haruya510/wiki-com-search#readme",
+  "bugs": {
+    "url": "https://github.com/haruya510/wiki-com-search/issues"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
 }
